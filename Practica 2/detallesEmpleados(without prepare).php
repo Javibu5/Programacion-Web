@@ -13,14 +13,9 @@ $conn = new mysqli ($host, $username, $password, $database);
     echo $mysqli->host_info . "\n";
 }
 
-  $stmt = $conn->prepare("SELECT * from empleados where dni=?");
-  $stmt->bind_param("s", $_GET['dni']);
+  $sql ="SELECT * from empleados where dni='" . $_GET['dni'] . "'";
 
-  
-
-   $stmt->execute();
-   $rows = $stmt->get_result();
-   
+   $rows = $conn->query($sql);
    if (!$rows)
     die ($conn->error);
    
