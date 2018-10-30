@@ -1,6 +1,11 @@
 
+<head>
+<title>Empleado</title>
+</head>
+
+
 <?php
-    //require_once('queryFunctions.php');
+  
  
    $host = "127.0.0.1";
    $username = "root";

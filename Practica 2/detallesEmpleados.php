@@ -1,6 +1,10 @@
 
+<head>
+<title>Empleado</title>
+</head>
+
 <?php
-    //require_once('queryFunctions.php');
+
  
    $host = "127.0.0.1";
    $username = "root";
@@ -14,10 +18,10 @@ $conn = new mysqli ($host, $username, $password, $database);
 }
 
   $stmt = $conn->prepare("SELECT * from empleados where dni=?");
+
   $stmt->bind_param("s", $_GET['dni']);
 
   
-
    $stmt->execute();
    $rows = $stmt->get_result();
    

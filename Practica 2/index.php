@@ -46,7 +46,7 @@ $sql = "SELECT nombre, dni from empleados"
     {
 echo '<tr>
             <td>'.$row["nombre"].'</td>
-      <td><a href="detallesEmpleados.php?dni='.urldecode($row["dni"]).'">Ver detalles</a></td></tr>';
+      <td><a href="detallesEmpleados.php?dni='.urlencode($row["dni"]).'">Ver detalles</a></td></tr>';
     }
    echo "</table>";
    $conn = null;
