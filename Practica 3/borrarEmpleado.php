@@ -21,12 +21,12 @@ if ($conn->connect_errno) {
       if (!$resultado)
       die("Operacion en base de datos fallida : ".$conn->error);
 
-    echo "Se ha borrado con exito"  
+    echo "Se ha borrado con exito";
 
 
     $conn = null;
 
-   header("Location: index.php");
+   header("Location:/index.php");
 
    ?>
    

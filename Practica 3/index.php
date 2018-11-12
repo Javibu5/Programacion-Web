@@ -48,8 +48,15 @@ $sql = "SELECT nombre, dni from empleados"
             <td><a href="detallesEmpleados.php?dni='.urlencode($row["dni"]).'">Ver detalles</a></td>
             <td><a href="borrarEmpleado.php?dni='.urlencode($row["dni"]).'">Borrar </a></td>
             <td><a href="editarEmpleado.php?dni='.urlencode($row["dni"]).'">Editar </a></td>
+
       </tr>';
     }
    echo "</table>";
    $conn = null;
   ?>
+
+  <br/></br> 
+  <form method="post" action="editarEmpleado.php">
+    <input type="submit" value="reistrar nuevo libro"/>
+  </form>
+

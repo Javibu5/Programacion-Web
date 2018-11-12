@@ -13,21 +13,21 @@ if ($conn->connect_errno) {
 
   $stmt = $conn->prepare("UPDATE empleados set dni=?, nombre=? ,apellido=? ,direccion=?, anoNacimiento=? ,departamento=?");
 
-  $stmt->bind_param("s,s,s,s,s,s", $_POST['dni'] , $_POST['nombre'] ,$_POST['apellido'],$_POST['direccion'] , $_POST['anoNacimiento'], $_POST['departamento']);
+  $stmt->bind_param("ssssis", $_POST['dni'] , $_POST['nombre'] ,$_POST['apellido'],$_POST['direccion'] , $_POST['anoNacimiento'], $_POST['departamento']);
   
     $stmt->execute();
 
    $resultado = $stmt->get_result();
 
-      if (!$resultado)
+      if ($resultado){
       die("Operacion en base de datos fallida : " .$conn->error);
+    }
 
+    echo "Operacion realizada con exito";
     
-
-
     $conn = null;
 
-   header("Location: index.php");
+   header("Location:/index.php");
 
    ?>
    
