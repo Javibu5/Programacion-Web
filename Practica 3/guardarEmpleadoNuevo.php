@@ -28,6 +28,6 @@ if ($conn->connect_errno) {
     $conn = null;
 
    header("Location:/index.php");
-
+   
    ?>
    
