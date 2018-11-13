@@ -18,7 +18,7 @@ if ($conn->connect_errno) {
 
    $resultado = $stmt->get_result();
 
-      if (!$resultado)
+      if ($resultado)
       die("Operacion en base de datos fallida : ".$conn->error);
 
     echo "Se ha borrado con exito";

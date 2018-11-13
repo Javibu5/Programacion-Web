@@ -1,4 +1,3 @@
-<head>
 <title>Empleado</title>
 </head>
 
@@ -29,7 +28,7 @@ $conn = new mysqli ($host, $username, $password, $database);
    
    $row=$rows->fetch_assoc();
   ?>
-  <form method="post" action="/actualizarEmpleado.php">
+  <form method="post" action="/guardarEmpleadoNuevo.php">
 
   <label for="dni"><strong>DNI</strong></label>
   <input type="text" name="dni" id="dni" value="<?php echo $row["dni"]?$row["dni"]:""?>"/> </br>

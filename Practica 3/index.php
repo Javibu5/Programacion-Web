@@ -56,7 +56,7 @@ $sql = "SELECT nombre, dni from empleados"
   ?>
 
   <br/></br> 
-  <form method="post" action="editarEmpleado.php">
-    <input type="submit" value="reistrar nuevo libro"/>
+  <form method="post" action="nuevoEmpleado.php">
+    <input type="submit" value="Registrar nuevo empleado"/>
   </form>
 
