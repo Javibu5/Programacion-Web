@@ -11,9 +11,9 @@ if ($conn->connect_errno) {
 }
 
 
-  $stmt = $conn->prepare("UPDATE empleados set dni=?, nombre=? ,apellido=? ,direccion=?, anoNacimiento=? ,departamento=?");
+  $stmt = $conn->prepare("UPDATE empleados set dni=?, nombre=? ,apellido=? ,direccion=?, anoNacimiento=? ,departamento=? where dni=?");
 
-  $stmt->bind_param("ssssis", $_POST['dni'] , $_POST['nombre'] ,$_POST['apellido'],$_POST['direccion'] , $_POST['anoNacimiento'], $_POST['departamento']);
+  $stmt->bind_param("ssssiss", $_POST['dni'] , $_POST['nombre'] ,$_POST['apellido'],$_POST['direccion'] , $_POST['anoNacimiento'], $_POST['departamento'] , $_POST['dni']);
   
     $stmt->execute();
 
